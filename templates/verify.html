@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verify Certificate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Verify Certificate</h2>
+        <form action="{{ url_for('verify') }}" method="post">
+            <label>Certificate ID:</label>
+            <input name="cert_id" required>
+            <label>Email:</label>
+            <input name="email" required>
+            <button type="submit">Verify</button>
+        </form>
+        <p><a href="{{ url_for('dashboard') }}">Back to Dashboard</a></p>
+    </div>
+</body>
+</html>

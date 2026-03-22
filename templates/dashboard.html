@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Welcome {{ name }}!</h2>
+        <p>Role: {{ role }}</p>
+
+        <div class="links">
+            {% if role == 'admin' %}
+                <a href="{{ url_for('generate_form') }}">Generate Certificate</a><br>
+            {% endif %}
+            <a href="{{ url_for('verify_form') }}">Verify Certificate</a><br>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

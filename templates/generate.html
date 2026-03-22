@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Certificate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Generate Certificate</h2>
+        <form action="{{ url_for('generate') }}" method="post">
+            <label>Certificate ID:</label>
+            <input name="cert_id" required>
+            <label>Email:</label>
+            <input name="email" required>
+            <label>Name:</label>
+            <input name="name" required>
+            <label>Course:</label>
+            <input name="course" required>
+            <button type="submit">Generate</button>
+        </form>
+        <p><a href="{{ url_for('dashboard') }}">Back to Dashboard</a></p>
+    </div>
+</body>
+</html>
